@@ -1,0 +1,23 @@
+import BaseSchema from '@ioc:Adonis/Lucid/Schema'
+
+export default class {{ pivotSchemaName }} extends BaseSchema {
+  protected permissionPivotTable = '{{ permissionPivotTable }}'
+  protected rolePivotTable = '{{ rolePivotTable }}'
+
+  public async up() {
+    this.schema.createTable(this.permissionPivotTable, (table) => {
+      table.integer('permission_id').unsigned().references('id').inTable('{{ permissionsTable }}').onDelete('CASCADE')
+      table.integer('model_id').unsigned().references('id').inTable('{{ modelTable }}').onDelete('CASCADE')
+    })
+
+    this.schema.createTable(this.rolePivotTable, (table) => {
+      table.integer('role_id').unsigned().references('id').inTable('{{ rolesTable }}').onDelete('CASCADE')
+      table.integer('model_id').unsigned().references('id').inTable('{{ modelTable }}').onDelete('CASCADE')
+    })
+  }
+
+  public async down() {
+    this.schema.dropTable(this.permissionPivotTable)
+    this.schema.dropTable(this.rolePivotTable)
+  }
+}
