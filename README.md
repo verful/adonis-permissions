@@ -35,7 +35,7 @@ node ace configure @verful/permissions
 ```
 
 ## **Getting started**
-Once the package is installed the first thing you wan't to do is apply the `Authorizable` mixin from `@ioc:Verful/Permissions/Mixins` into a model
+Once the package is installed the first thing you want to do is apply the `Authorizable` mixin from `@ioc:Verful/Permissions/Mixins` into a model
 
 ```typescript
 import { Authorizable } from '@ioc:Verful/Permissions/Mixins'
@@ -48,6 +48,11 @@ const config = {
 }
 
 export default class User extends compose(BaseModel, Authorizable(config)) {}
+```
+
+Now its time to create the pivot-table migration files
+```
+node ace permissions:pivot-table
 ```
 
 After the mixin is applied you can do stuff like this
