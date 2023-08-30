@@ -136,6 +136,6 @@
     "access": "public"
   },
   "dependencies": {
-    "luxon": "^2.4.0"
+    "luxon": "^3.4.2"
   }
 }
