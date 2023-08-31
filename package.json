@@ -63,20 +63,19 @@
     }
   },
   "scripts": {
-    "mrm": "mrm --preset=@adonisjs/mrm-preset",
-    "test": "node -r @adonisjs/assembler/build/register bin/test/index.ts",
-    "coverage": "nyc yarn test",
-    "clean": "del build",
+    "pretest": "pnpm lint",
+    "test": "node --require=@adonisjs/assembler/build/register bin/test/index.ts",
+    "coverage": "nyc pnpm test",
+    "clean": "del-cli build",
     "copyfiles": "copyfiles \"templates/**/*.txt\" \"instructions.md\" build",
-    "compile": "yarn lint && yarn clean && tsc",
-    "build": "yarn compile && yarn copyfiles",
-    "prepublishOnly": "yarn build",
+    "compile": "pnpm lint && pnpm clean && tsc",
+    "build": "pnpm compile && pnpm copyfiles",
+    "release": "np --message=\"chore(release): %s\"",
+    "version": "pnpm build",
+    "prepublishOnly": "pnpm build",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
-    "commit": "git-cz",
-    "release": "np --message=\"chore(release): %s\"",
-    "version": "yarn build",
-    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json verful/permissions"
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=10"
