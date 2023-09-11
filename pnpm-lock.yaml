@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   luxon:
-    specifier: ^2.4.0
-    version: 2.5.2
+    specifier: ^3.4.3
+    version: 3.4.3
 
 devDependencies:
   '@adonisjs/assembler':
@@ -330,7 +330,7 @@ packages:
       igniculus: 1.5.0
       knex: 2.5.1(sqlite3@5.1.6)
       knex-dynamic-connection: 3.1.0(sqlite3@5.1.6)
-      luxon: 3.4.2
+      luxon: 3.4.3
       macroable: 7.0.2
       pretty-hrtime: 1.0.3
       qs: 6.11.2
@@ -421,7 +421,7 @@ packages:
       '@poppinss/utils': 5.0.0
       '@types/luxon': 3.3.2
       '@types/validator': 13.11.1
-      luxon: 3.4.2
+      luxon: 3.4.3
       normalize-url: 6.1.0
       tmp-cache: 1.1.0
       validator: 13.11.0
@@ -5626,15 +5626,9 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /luxon@2.5.2:
-    resolution: {integrity: sha512-Yg7/RDp4nedqmLgyH0LwgGRvMEKVzKbUdkBYyCosbHgJ+kaOUx0qzSiSatVc3DFygnirTPYnMM2P5dg2uH1WvA==}
+  /luxon@3.4.3:
+    resolution: {integrity: sha512-tFWBiv3h7z+T/tDaoxA8rqTxy1CHV6gHS//QdaH4pulbq/JuBSGgQspQQqcgnwdAx6pNI7cmvz5Sv/addzHmUg==}
     engines: {node: '>=12'}
-    dev: false
-
-  /luxon@3.4.2:
-    resolution: {integrity: sha512-uBoAVCVcajsrqy3pv7eo5jEUz1oeLmCcnMv8n4AJpT5hbpN9lUssAXibNElpbLce3Mhm9dyBzwYLs9zctM/0tA==}
-    engines: {node: '>=12'}
-    dev: true
 
   /macroable@7.0.2:
     resolution: {integrity: sha512-QS9p+Q20YBxpE0dJBnF6CPURP7p1GUsxnhTxTWH5nG3A1F5w8Rg3T4Xyh5UlrFSbHp88oOciVP/0agsNLhkHdQ==}
