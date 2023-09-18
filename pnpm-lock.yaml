@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^2.0.3
     version: 2.0.3
   '@types/node':
-    specifier: ^17.0.38
-    version: 17.0.45
+    specifier: ^20.6.2
+    version: 20.6.2
   commitizen:
     specifier: ^4.2.4
     version: 4.3.0
@@ -1329,6 +1329,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@types/node@20.6.2:
+    resolution: {integrity: sha512-Y+/1vGBHV/cYk6OI1Na/LHzwnlNCAfU3ZNGrc1LdRe/LAIbdDPTTv/HU3M7yXN448aTVDq3eKRm2cg7iKLb8gw==}
+    dev: true
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
